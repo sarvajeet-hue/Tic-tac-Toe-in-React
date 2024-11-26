@@ -18,13 +18,13 @@ export const Tictactoe = () => {
   ];
   function handleClick(index) {
 
-      currentPlayer === "X" ? setCurrentPlayert("O") : setCurrentPlayer("X")
+      currentPlayer === "X" ? setCurrentPlayer("O") : setCurrentPlayer("X")
     
     setBlocks((prevBlock) => {
          
         const newBlock = [...prevBlock]
         
-        newBlock[index] = cross
+        newBlock[index] = currentPlayer
 
         return newBlock
     })
