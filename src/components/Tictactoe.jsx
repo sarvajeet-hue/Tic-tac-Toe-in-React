@@ -4,7 +4,7 @@ export const Tictactoe = () => {
   
   
   const [blocks , setBlocks] = useState(new Array(9).fill(null))
-  const [cross , setCross] = useState("X")
+  const [currentPlayer , setCurrentPlayer] = useState("X")
 
   const board_Design = [
     [0, 1, 2],
@@ -18,10 +18,10 @@ export const Tictactoe = () => {
   ];
   function handleClick(index) {
 
-      cross === "X" ? setCross("O") : setCross("X")
+      currentPlayer === "X" ? setCurrentPlayert("O") : setCurrentPlayer("X")
     
     setBlocks((prevBlock) => {
-        
+         
         const newBlock = [...prevBlock]
         
         newBlock[index] = cross
